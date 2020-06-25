@@ -3,7 +3,7 @@ FROM busybox:1.31.1-glibc
 ARG BUILD_DATE
 ARG VCS_REF
 
-COPY --from=gcr.io/cloudsql-docker/gce-proxy:1.17 /cloud_sql_proxy /usr/local/bin/
+COPY --from=gcr.io/cloudsql-docker/gce-proxy:1.17 /cloud_sql_proxy /
 COPY --from=banzaicloud/vault-env:1.3.2 /usr/local/bin/vault-env /usr/local/bin/
 COPY --from=gcr.io/distroless/base-debian10:nonroot /etc/ssl /etc/ssl
 
